@@ -1,0 +1,26 @@
+Command: g++ -fopenmp program_name.cpp -o binary_name.out && ./binary_name.out
+For cuda programs: nvcc program_name.cu -o binary_name.out && ./binary_name.out
+
+
+
+
+
+!pip install git+https://github.com/afnan47/cuda.git
+%load_ext nvcc_plugin
+
+%%cu
+
+
+
+
+!apt-get install nvidia-cuda-toolkit
+!nvidia-smi
+
+%%writefile vector.cu
+
+
+g++ abc.cpp -o abc -fopenmp
+./abc
+
+nvcc abc.cu -o abc
+./abc
